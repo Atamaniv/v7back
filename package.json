@@ -1,0 +1,21 @@
+{
+  "name": "v7back",
+  "version": "1.0.0",
+  "description": "Back for v7",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Atamaniv",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "password-generator": "^2.2.0"
+  }
+}
+
+
+
+
+
+
