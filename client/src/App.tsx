@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 interface State {
-  passArray:Array<string>
+  pass:Array<string>
 }
 
 interface Props {
@@ -13,16 +13,16 @@ interface Props {
 class App extends Component < Props , State > {
   constructor(props: Props) {
     super(props);
-    this.state = { passArray :[]}
-    this.state.passArray.push("xxx")
+    this.state = { pass :[]}    
   }
 
   componentDidMount=()=>{
     //fetch('https://v7back.herokuapp.com/api/passwords')
-    fetch('/api/passwords')
-      .then(response => response.json())
-      .then(json => this.setState({passArray: json.Data } ))
-      .then(_ => console.log(this.state.passArray))      
+    fetch('http://localhost:5000/api/passwords')
+    //fetch('/passwords')    
+      // .then(res => res.json())
+      // .then(pass => this.setState({ pass }))
+      // .then(_ => console.log(this.state.pass.toString()))
   }
 
   render() {
@@ -32,8 +32,9 @@ class App extends Component < Props , State > {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             {
-              this.state.passArray[1]
+              //this.state.passArray[1]
             }
+            TSX forever
           </p>
           <a
             className="App-link"
