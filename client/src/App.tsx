@@ -18,8 +18,8 @@ class App extends Component < Props , State > {
 
   componentDidMount=()=>{
     //fetch('https://v7back.herokuapp.com/api/passwords')
-    //fetch('http://localhost:5000/api/passwords')
-    fetch('/api/passwords')
+    fetch('http://localhost:5000/api/passwords')
+    //fetch('/api/passwords') //Herocu path
     //fetch('/passwords')    
        .then(res => res.json())
        .then(pass => this.setState({ pass }))
